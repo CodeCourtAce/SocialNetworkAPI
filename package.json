@@ -4,10 +4,10 @@
   "description": "## Your Task",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "start": "ts-node-dev --loader tsconfig-paths/register --respawn --transpile-only src/index.ts",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npm run build && node dist/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "mongoose": "^8.8.1"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
